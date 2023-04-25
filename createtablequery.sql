@@ -1,0 +1,37 @@
+CREATE TABLE titles
+(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+title VARCHAR(100),
+genre_id INT,
+release_year SMALLINT,
+director_id INT,
+studio_id INT
+);
+
+CREATE TABLE genre
+(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+genre VARCHAR(25)
+);
+
+CREATE TABLE director
+(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+dir_name VARCHAR(40)
+);
+
+CREATE TABLE studio
+(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+studio_name VARCHAR(30),
+city VARCHAR(20)
+);
+
+CREATE TABLE critic_rating
+(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+titles_id INT,
+critics_rating DECIMAl(2,1)
+);
+
+
